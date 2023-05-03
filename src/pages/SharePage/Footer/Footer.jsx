@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div className="px-5 py-6 lg:px-24 lg:py-28  bg-gray-950 mt-28">
+      <div className="px-5 py-6 lg:px-24 lg:py-20  bg-gray-950">
         <div className="grid grid-cols lg:grid-cols-6 pb-10">
           <div className="col-span-2">
             <h3 className="text-white font-extrabold text-3xl pb-5">
