@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import chef from "../../assets/chef/pexels-cottonbro-studio-4253298.jpg";
 import Cart from "../Cart/Cart";
 
 const OurChef = () => {
-  const [datas, setDatas] = useState();
+  const [datas, setDatas] = useState([]);
 
   useEffect(() => {
     fetch(`https://chef-recipe-hunter-server-side-saiful264.vercel.app/chef's`)
@@ -12,6 +11,7 @@ const OurChef = () => {
       .catch((error) => console.error(error));
   }, []);
 
+console.log(datas);
 
   return (
     <div className="py-14 bg-slate-50">
@@ -22,10 +22,12 @@ const OurChef = () => {
           the art of cooking.
         </p>
       </div>
-      <div className="">
-        {
-            datas.map((data) => console.log(data))
+      <div className="py-12 ps-6">
+       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+       {
+            datas.map((data) => <Cart key={data._id} data ={data} />)
         }
+       </div>
       </div>
     </div>
   );

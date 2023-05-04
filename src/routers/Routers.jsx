@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import Blog from "../pages/Blog/Blog";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Banner from "../pages/Banner/Banner";
+import SingleChef from "../pages/SingleChef/SingleChef";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: 'aboutus',
         element: <AboutUs/>
+      },
+      {
+        path: "singleChef/:id",
+        element: <SingleChef/>,
+        loader: ({params})=> fetch(`https://chef-recipe-hunter-server-side-saiful264.vercel.app/chef's/${params.id}`)
       }
     ]
   }
