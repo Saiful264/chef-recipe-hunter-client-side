@@ -37,7 +37,7 @@ const Register = () => {
           />
         </div>
         <p className="text-start text-base font-semibold">create a new acount<Link to="/login" className="text-indigo-700 underline pl-2">Login</Link></p>
-        <button type="submit" className="btn-primary">
+        <button type="submit" className="btns-primary">
           Register
         </button>
       </div>

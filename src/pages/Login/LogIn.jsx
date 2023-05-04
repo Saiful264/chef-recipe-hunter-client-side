@@ -23,14 +23,14 @@ const LogIn = () => {
           />
         </div>
         <p className="text-start text-base font-semibold">create a new acount<Link to="/register" className="text-indigo-700 underline pl-2">Register</Link></p>
-        <button type="submit" className="btn-primary">
+        <button type="submit" className="btns-primary">
           LogIn
         </button>
 
         <div className="py-4">
-        <button className="text-base font-semibold btn-primary"> Continue with google</button>
+        <button className="text-base font-semibold btns-primary"> Continue with google</button>
         </div>
-        <button className="text-base font-semibold btn-primary"> Continue with github</button>
+        <button className="text-base font-semibold btns-primary"> Continue with github</button>
       </div>
     </div>
   );
