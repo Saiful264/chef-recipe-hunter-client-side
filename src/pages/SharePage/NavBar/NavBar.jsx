@@ -16,9 +16,9 @@ const NavBar = () => {
         </Link>
         <ul className="font-bold gap-9 hidden lg:flex">
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "default:")}
+          <NavLink
+              to=""
+              className={({ isActive }) => (isActive ? "active" : "default")}
             >
               Home
             </NavLink>
