@@ -76,7 +76,7 @@ const handleGithubSignIn = () =>{
         </div>
         <div className="w-full pb-2">
           <input
-            type="pasword"
+            type="password"
             name="password"
             placeholder="Password"
             required
