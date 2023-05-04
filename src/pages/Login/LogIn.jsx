@@ -26,6 +26,11 @@ const LogIn = () => {
         <button type="submit" className="btn-primary">
           LogIn
         </button>
+
+        <div className="py-4">
+        <button className="text-base font-semibold btn-primary"> Continue with google</button>
+        </div>
+        <button className="text-base font-semibold btn-primary"> Continue with github</button>
       </div>
     </div>
   );

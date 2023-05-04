@@ -33,6 +33,14 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
+              to="/aboutus"
+              className={({ isActive }) => (isActive ? "active" : "default")}
+            >
+              Aount Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/login"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
