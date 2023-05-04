@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo/chef-1.png";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const NavBar = () => {
+  const {user, logOut} = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleLogOut = () =>{
+    logOut().then()
+    .catch(error => console.log(error.message))
+  }
 
   return (
     <nav className=" px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-16 bg-slate-200">
@@ -16,7 +23,7 @@ const NavBar = () => {
         </Link>
         <ul className="font-bold gap-9 hidden lg:flex">
           <li>
-          <NavLink
+            <NavLink
               to=""
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
@@ -40,12 +47,20 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/login"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              LogIn
-            </NavLink>
+            {user ? (
+              <Link>
+                <NavLink onClick={handleLogOut} variant="secondary">
+                  LogOut
+                </NavLink>
+              </Link>
+            ) : (
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                LogIn
+              </NavLink>
+            )}
           </li>
         </ul>
         <div className="lg:hidden">
@@ -93,38 +108,38 @@ const NavBar = () => {
                 </button>
               </div>
               <div className="pl-4 pt-3">
-              <ul className="font-bold gap-9">
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? "active" : "default:"
-                    }
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/blog"
-                    className={({ isActive }) =>
-                      isActive ? "active" : "default"
-                    }
-                  >
-                    Blog
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/Login"
-                    className={({ isActive }) =>
-                      isActive ? "active" : "default"
-                    }
-                  >
-                    LogIn
-                  </NavLink>
-                </li>
-              </ul>
+                <ul className="font-bold gap-9">
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "default:"
+                      }
+                    >
+                      Home
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/blog"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "default"
+                      }
+                    >
+                      Blog
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/Login"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "default"
+                      }
+                    >
+                      LogIn
+                    </NavLink>
+                  </li>
+                </ul>
               </div>
             </div>
           )}
