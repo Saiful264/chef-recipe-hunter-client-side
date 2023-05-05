@@ -1,6 +1,7 @@
 import React from "react";
 import banner from "../../assets/banner/Cooking.gif";
 import OurChef from "../OurChef/OurChef";
+import logo from "../../assets/logo/cooking.png";
 
 const Banner = () => {
   return (
@@ -22,10 +23,69 @@ const Banner = () => {
             </button>
           </div>
         </div>
-        <img className="lg:w-2/5" src={banner} alt=""/>
+        <img className="lg:w-2/5" src={banner} alt="" />
       </div>
 
       <OurChef />
+
+      <div>
+        <div className="text-center py-11">
+          <h1 className="text-6xl font-sans font-bold italic pb-2">
+            Our Service
+          </h1>
+          <p className="text-xl font-semibold">
+            you specialize in catering for weddings, parties, or other special
+            events, this title could be a good fit.
+          </p>
+        </div>
+
+        <div className="flex justify-between px-28">
+          <div className="bg-slate-100 rounded p-10">
+            <img className="w-20 h-20" src={logo} alt="" />
+            <div className="pt-8">
+              <h2 className="font-extrabold text-xl text-gray-700 pb-2">
+                job title
+              </h2>
+              <p className="text-base font-medium text-gray-400">
+                Demo text :Their role
+              </p>
+            </div>
+          </div>
+          <div className="bg-slate-100 rounded p-10">
+            <img className="w-20 h-20" src={logo} alt="" />
+            <div className="pt-8">
+              <h2 className="font-extrabold text-xl text-gray-700 pb-2">
+                job title
+              </h2>
+              <p className="text-base font-medium text-gray-400">
+                Demo text :Their role
+              </p>
+            </div>
+          </div>
+          <div className="bg-slate-100 rounded p-10">
+            <img className="w-20 h-20" src={logo} alt="" />
+            <div className="pt-8">
+              <h2 className="font-extrabold text-xl text-gray-700 pb-2">
+                job title
+              </h2>
+              <p className="text-base font-medium text-gray-400">
+                Demo text :Their role
+              </p>
+            </div>
+          </div>
+          <div className="bg-slate-100 rounded p-10">
+            <img className="w-20 h-20" src={logo} alt="" />
+            <div className="pt-8">
+              <h2 className="font-extrabold text-xl text-gray-700 pb-2">
+                job title
+              </h2>
+              <p className="text-base font-medium text-gray-400">
+                Demo text :Their role
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

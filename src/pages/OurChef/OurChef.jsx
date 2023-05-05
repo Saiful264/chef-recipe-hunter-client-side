@@ -11,8 +11,6 @@ const OurChef = () => {
       .catch((error) => console.error(error));
   }, []);
 
-console.log(datas);
-
   return (
     <div className="py-14 bg-slate-50">
       <div className="text-center py-4">

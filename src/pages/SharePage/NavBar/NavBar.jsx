@@ -4,13 +4,16 @@ import logo from "../../../assets/logo/chef-1.png";
 import { AuthContext } from "../../../contexts/AuthProvider";
 
 const NavBar = () => {
-  const {user, logOut} = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLogOut = () =>{
-    logOut().then()
-    .catch(error => console.log(error.message))
-  }
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error.message));
+  };
+
+  console.log(user);
 
   return (
     <nav className=" px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-16 bg-slate-200">
@@ -48,11 +51,16 @@ const NavBar = () => {
           </li>
           <li>
             {user ? (
-              <Link>
+              <div className="flex gap-2">
+                <div className="avatar">
+                  <div className="rounded-full">
+                   {user.photoURL &&  <img src= {user.photoURL} />}
+                  </div>
+                </div>
                 <NavLink onClick={handleLogOut} variant="secondary">
                   LogOut
                 </NavLink>
-              </Link>
+              </div>
             ) : (
               <NavLink
                 to="/login"
