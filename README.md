@@ -1,6 +1,6 @@
 ## Live Link
 
-Hosted in firebase -> [Chef's Recipe](https://singular-mandazi-77e522.netlify.app/)
+Hosted in firebase -> [Chef's Recipe](https://splendid-meerkat-8eba7c.netlify.app/)
 
 ## 5 key point about My Project
     
