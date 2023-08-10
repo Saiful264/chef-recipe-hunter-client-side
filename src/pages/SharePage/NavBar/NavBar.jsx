@@ -13,7 +13,6 @@ const NavBar = () => {
       .catch((error) => console.log(error.message));
   };
 
-  console.log(user);
 
   return (
     <nav className=" px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-16 bg-slate-200">

@@ -2,6 +2,7 @@ import React from "react";
 import banner from "../../assets/banner/Cooking.gif";
 import OurChef from "../OurChef/OurChef";
 import logo from "../../assets/logo/cooking.png";
+import Faq from "../Faq.jsx/Faq";
 
 const Banner = () => {
   return (
@@ -39,7 +40,7 @@ const Banner = () => {
           </p>
         </div>
 
-        <div className="flex justify-between px-28">
+        <div className="flex justify-between px-28 pb-8">
           <div className="bg-slate-100 rounded p-10">
             <img className="w-20 h-20" src={logo} alt="" />
             <div className="pt-8">
@@ -86,6 +87,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+
+      <Faq/>
+
     </div>
   );
 };

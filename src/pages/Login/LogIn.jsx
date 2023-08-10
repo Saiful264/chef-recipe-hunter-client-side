@@ -67,7 +67,7 @@ const handleGithubSignIn = () =>{
 
   return (
     <div className="flex justify-center pt-5 bg-slate-50 py-12">
-      <Form onSubmit={handleLogIn} className="card w-96 bg-slate-200 shadow-xl items-center text-center py-8 rounded-lg">
+     <Form onSubmit={handleLogIn} className="card w-96 bg-slate-200 shadow-xl items-center text-center py-8 rounded-lg">
         <h1 className="text-2xl font-bold">LogIn</h1>
         {loginError && <span className="text-2xl text-red-700">{loginError}</span>}
         <div className="py-6 w-full">

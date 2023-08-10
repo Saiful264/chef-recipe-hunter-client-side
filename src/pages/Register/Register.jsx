@@ -58,10 +58,6 @@ const Register = () => {
         setRegError(errorMessage);
         console.log(errorMessage, errorCode);
       });
-      
-      
-
-     
   };
 
   return (
